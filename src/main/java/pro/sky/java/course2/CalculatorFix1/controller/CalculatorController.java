@@ -33,10 +33,6 @@ public class CalculatorController {
 
     @GetMapping("/divide")
     public String division(@RequestParam int num1, @RequestParam int num2) {
-        try {
-            return num1 + " / " + num2 + " = " + calculatorService.Divide(num1, num2);
-        } catch (ArithmeticException exception) {
-            return "Деление на ноль невозможно";
-        }
+        return num1 + " / " + num2 + " = " + calculatorService.Divide(num1, num2);
     }
 }
